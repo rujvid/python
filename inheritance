@@ -1,0 +1,33 @@
+class Animals:
+    color = ' '
+    ageCount = 0
+    legCount = 0
+
+    def __init__(self, color='', ageCount=0, legCount=0,):
+        self.color = color
+        self.ageCount = ageCount
+        self.legCount = legCount
+
+
+    def printInfo(self):
+        print(f'The animal info is, {vars(self)}')
+
+
+class Reptile(Animals):
+    def printInfo(self):
+        print(f'The reptile info is, {vars(self)}')
+
+class Bird(Animals):
+    def __init__(self, color='', ageCount=0, legCount=0, wingCount=0):
+        super().__init__(color, legCount, ageCount,)
+        self.wingCount = wingCount
+
+    def printInfo(self):
+        print(f'The bird info is, {vars(self)}')
+animals = Animals('Brown', 4, 15)
+reptile = Reptile('Green', 4, 20)
+bird = Bird('Blue', 2, 5)
+
+animals.printInfo()
+reptile.printInfo()
+bird.printInfo()
