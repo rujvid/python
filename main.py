@@ -1,16 +1,23 @@
-# This is a sample Python script.
+firstName = 'Srikar'
+lastName = 'Kotha'
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+fullName = firstName + " " + lastName
+print('My name is: ' + fullName + ', not done yet...')
+
+score1 = 34  # int(input('score1: '))
+score2 = 56  # int(input('score2: '))
+finalScore = score2 - score1
+print('Result: ', str(score2 - score1), 'end of program...')
+
+print("My name is: %s, my score is %i" % (fullName, finalScore))
+print('My name: {}, my score: {}' .format(fullName, finalScore))
+#or
+print('My name: {first}, my score: {second}' .format(first=fullName, second=finalScore))
+print(f'My name: {fullName}, my score: {finalScore}')
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# 1. plain format, passing multiple values
+# 2. string concatinate: joing two string
+# 3. using % format
+# 4. using format()
+# 5. using f-string
